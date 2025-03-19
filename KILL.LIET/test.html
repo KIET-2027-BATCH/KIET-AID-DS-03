@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            animation: colorChange 3s infinite alternate;
+        }
+        @keyframes colorChange {
+            0% { color: #ff0000; }
+            50% { color: #00ff00; }
+            100% { color: #0000ff; }
+        }
+        input[type="text"],
+        select {
+            width: 90%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input[type="submit"] {
+            background: #ff0223;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #00eb5a;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="submit.php" method="post">
+            <input type="text" name="name" placeholder="Enter your name" required><br>          
+            <input type="text" name="id" placeholder="Enter your ID" required><br>
+            <select name="branch" required>
+                <option value="" disabled selected>Select Branch</option>
+                <option value="AID">AID</option>
+                <option value="CSM">CSM</option>
+                <option value="CAI">CAI</option>
+                <option value="CSD">CSD</option> 
+            </select><br>
+            <select name="technology" required>
+                <option value="" disabled selected>Select Technology</option>
+                <option value="ML">MACHINE LEARNING</option>
+                <option value="AI">ARTIFICIAL INTELLIGENCE</option>
+                <option value="DL">DEEP LEARNING</option>
+                <option value="EMO">NAKU TELIYADHU</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
